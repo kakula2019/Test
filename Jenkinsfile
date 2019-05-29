@@ -11,12 +11,16 @@ pipeline {
         }
     }
 
-         stage('deploy stage') {
+         stage('test stage') {
              steps {
                 bat "mvn test"
         }
     }
-
+stage('deploy stage') {
+             steps {
+                bat "mvn deploy"
+        }
+    }
          }
 
 }

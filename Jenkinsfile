@@ -17,7 +17,12 @@ pipeline {
         }
     }
 
-        
+          stage('deploy stage') {
+              steps {
+                bat "mvn dep"
+        }
+    }
+
   }
 
 }

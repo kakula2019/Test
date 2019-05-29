@@ -5,7 +5,7 @@ pipeline {
         maven 'Maven' 
     }
     stages {
-        stage('Compile stage') {
+        stage('build stage') {
             steps {
                 bat "mvn clean compile" 
         }
@@ -17,12 +17,6 @@ pipeline {
         }
     }
 
-          stage('deployment stage') {
-              steps {
-                bat "mvn deploy"
-        }
-    }
-
-  }
+         }
 
 }

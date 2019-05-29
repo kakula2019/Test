@@ -1,11 +1,10 @@
 pipeline {
-   agent any
-   stages {
-   stage ('compile stage') {
-   steps{
-   withMaven(maven :'Maven'){
-   sh 'mvn clean compile'
-   }
-   }      }
-   }
+    agent { docker { image 'maven:3.6.1' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'Maven --3.6.1'
+            }
+        }
+    }
 }

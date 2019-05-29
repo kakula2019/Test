@@ -6,7 +6,6 @@ pipeline {
    withMaven(maven :'Maven'){
    sh 'mvn clean compile'
    }
-   }
-      }
+   }      }
    }
 }
